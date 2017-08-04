@@ -30,9 +30,9 @@
           </header>
           <aside class="post-side">
             <div class="post-author">
-              {{#if author.image}}
+              {{#if author.profile_image}}
                 <a href="{{author.website}}" class="post-author-avatar">
-                  <img src="{{author.image}}" alt="{{author.name}}">
+                  <img src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
@@ -48,9 +48,9 @@
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
-              {{#if author.image}}
+              {{#if author.profile_image}}
                 <a href="{{author.website}}" class="post-author-avatar">
-                  <img itemprop="image" src="{{author.image}}" alt="{{author.name}}">
+                  <img itemprop="image" src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
@@ -73,12 +73,6 @@
                 </p>
               </div>
             </div>
-            <div class="post-social">
-              <h4 class="post-footer-heading">Spread the word</h4>
-              <a href="#" data-action="share-twitter"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
-              <a href="#" data-action="share-facebook"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
-              <a href="#" data-action="share-gplus"><i class="fa fa-fw fa-lg fa-google-plus"></i></a>
-            </div>
           </footer>
         </section>
       {{/post}}
@@ -94,7 +88,7 @@
 <script type="text/javascript">
   if(GHOSTIUM.haveDisqus) {
     {{#post}}
-    var disqus_identifier = '{{id}}';
+    var disqus_identifier = '{{comment_id}}';
     {{/post}}
 
     if(typeof DISQUS !== 'object') {
